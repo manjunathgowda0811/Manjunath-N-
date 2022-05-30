@@ -1,0 +1,15 @@
+mkdir hello
+cd hello
+mkdir -p {five/six/seven,one/two/three/four}
+touch {five/six/c.txt,five/six/seven/error.log}
+cd one
+touch {a.txt,b.txt,two/d.txt,two/three/e.txt,two/three/four/access.log}
+cd..
+find . -type f -name "*.log" -delete
+tree
+nano one/a.txt
+rm -r five
+tree
+mv one uno
+mv uno/a.txt uno/two
+tree
